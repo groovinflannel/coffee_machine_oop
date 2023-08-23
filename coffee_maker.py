@@ -23,3 +23,9 @@ class CoffeeMaker:
                 can_make_drink = False
 
         return can_make_drink
+
+    def make_coffee(self, order):
+        """Deducts ingredients from coffee machine resources."""
+        for item in order.ingredients:
+            self.resources[item] -= order.ingredients[item]
+        print(f"A {order.name} just for you. Enjoy!")
