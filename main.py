@@ -12,4 +12,6 @@ order = input("What would you like? Type espresso, latte, or cappuccino and pres
 
 our_coffee_maker.report()
 menu_item = our_menu.find_drink(order)
+our_coffee_maker.is_resource_sufficient(menu_item)
 our_coffee_maker.make_coffee(menu_item)
+our_coffee_maker.report()
